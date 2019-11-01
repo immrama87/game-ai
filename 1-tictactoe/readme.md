@@ -1008,12 +1008,19 @@ everything else, except for the **GameState#clone** method should be the same as
 At this point, if you've played a game against your AI, you'll have probably noticed that it does not quite hit the mark we were shooting for. If you're not sure what that means, try playing a game with the following moves:
 
 **Move 1:** Column 1, Row 1
+
 *AI selects cell at column 2 and row 2*
+
 **Move 2:** Column 3, Row 3
+
 *AI selects cell at column 3 and row 1*
+
 **Move 3:** Column 1, Row 3
+
 *AI selects cell at column 1 and row 2*
+
 **Move 4:** Column 2, Row 3
+
 *Player 1 Wins!*
 
 Obviously, this is not what we want. The goal for our AI is that it will always be able to force either a stalemate or a loss. As it turns out our brute force method of evaluating every permuation of the game from its current state is not only the least efficient manner of categorizing the strength of any particular move, but it's also generating a subpar result.
@@ -1021,17 +1028,25 @@ Obviously, this is not what we want. The goal for our AI is that it will always 
 What's happening is that our AI is missing critical information in order to determine its best move, in terms of both its efficiency and its efficacy. At this point we've only given our AI the ability to evaluate the current state and determine what moves are available, then ask the GameState instance to tell it whether or not any given move will produce a win state. We haven't actually taught it how to win, just how to tell if it *has* won. Teaching it how to win opens up our options pretty substantially, because it also gives it the ability to evaluate whether or not it can force its opponent's hand. If we were to replay the game above, but pick a different cell on the AI's second move, we'll see:
 
 **Move 1:** Column 1, Row 1
+
 *AI selects cell at column 2 and row 2*
+
 **Move 2:** Column 3, Row 3
+
 *AI selects cell at column 1 and row 2*
 
 Here the AI has created a situation where, if the player were to play the same cell as before (Column 1, Row 3), the AI can play the cell at column 3 and row 2 and win the game, forcing the player to play that cell. Continuing this game with ideal (or forced) moves, we see:
 
 **Move 3:** Column 3, Row 2
+
 *AI selects cell at column 3 and row 1*
+
 **Move 4:** Column 1, Row 3
+
 *AI selects cell at column 2 and row 3*
+
 **Move 5:** Column 2, Row 1
+
 There are no remaining moves to play. Stalemate!!!
 
 This is more like it! The simulated AI in the above example has forced a stalemate by taking control of the player's next move and ensuring that they either play the required blocking move or lose on the AI's next move.
@@ -1172,12 +1187,19 @@ if(firstCell && secondCell && isInCondition){
 Now, if we run `node index`, we should be able to get the results we were expecting, at least for one extra move. Now, the original example plays out like:
 
 **Move 1:** Column 1, Row 1
+
 *AI selects cell at column 2 and row 2*
+
 **Move 2:** Column 3, Row 3
+
 *AI selects cell at column 2 and row 1*
+
 **Move 3:** Column 2, Row 3
+
 *AI selects cell at column 3 and row 1*
+
 **Move 4:** Column 1, Row 3
+
 Player 1 wins!
 
 And here's the problem: with its 3rd move, the AI has now left open a position which secures a win for its opponent. Based on what we've taught the AI so far after the opponent's 3rd move, all remaining spaces will evaluate equally to:
@@ -1232,24 +1254,39 @@ if(opponentWins.length > 0){
 And now, if we replay the game we'll get:
 
 **Move 1:** Column 1, Row 1
+
 *AI selects cell at column 2 and row 2*
+
 **Move 2:** Column 3, Row 3
+
 *AI selects cell at column 2 and row 1*
+
 **Move 3:** Column 2, Row 3
+
 *AI selects cell at column 1 and row 3*
+
 **Move 4:** Column 3, Row 1
+
 *AI selects cell at column 3 and row 2*
+
 **Move 5:** Column 1, Row 2
+
 There are no remaining moves to play. Stalemate!!!
 
 And, if we misplay:
 
 **Move 1:** Column 1, Row 1
+
 *AI selects cell at column 2 and row 2*
+
 **Move 2:** Column 3, Row 3
+
 *AI selects cell at column 2 and row 1*
+
 **Move 3:** Column 3, Row 1
+
 *AI selects cell at column 2 and row 3*
+
 Player 2 wins!
 
 We've now taught the AI to keep itself from losing and to also punish opponent mistakes. We've done what we set out to. There are a couple of things that could be done to enhance this, like allowing the player to select whether they go first or second and allowing the AI to choose which cell to play when more than one exists which is considered "ideal" for the current state, but I'll leave that as homework for the reader since it doesn't have any effect on the core AI logic.
