@@ -138,7 +138,9 @@ function promptForRow(column){
 promptForColumn();
 ```
 
-Now, we have a game (sort of)! If we run `node index` now, we should see something like <INSERT SCREENSHOT BELOW>
+Now, we have a game (sort of)! If we run `node index` now, we should see something like
+
+![First round with player input](https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.25.54%20PM.png?raw=true)
 
 The game takes our inputs for a column and row and outputs an updated game board with an 'X' in the selected space, so we've got two of our four boxes checked. We still need input validation, because at this point the player can enter string data or overload the **state** array because we are simply trusting that their input is valid. The game also only works once, so it's currently impossible to win, lose or draw.
 
@@ -215,7 +217,9 @@ currentPlayer = (currentPlayer + 1) % 2; //Make sure we're clamping it so there 
 promptForColumn();
 ```
 
-Now, if we run `node index` we should see something like <INSERT SCREENSHOT HERE>
+Now, if we run `node index` we should see something like
+
+![Game loops and tracks player](https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.51.53%20PM.png?raw=true)
 
 At this point our /index.js should look like:
 
@@ -397,7 +401,9 @@ else {
 }
 ```
 
-Testing this, we should end up with something that looks like this <INSERT SCREENSHOT BELOW>
+Testing this, we should end up with something that looks like this
+
+![Stalemate condition reached](https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.51.04%20PM.png?raw=true)
 
 And now our game has its first end condition (even if it is the most boring one...)! We do still have the issue that players can overwrite their opponent's tokens, so before we build in a win condition, let's make sure players can't cheat first.
 
@@ -432,7 +438,9 @@ else {
 }
 ```
 
-Running `node index` now and trying to play the same cell twice should end up prompting the error message above, like this: <INSERT SCREENSHOT BELOW>
+Running `node index` now and trying to play the same cell twice should end up prompting the error message above, like this
+
+![Cell availability check fails](https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.31.51%20PM.png?raw=true)
 
 Now we're finally ready to build in a win condition. First we need to figure out what that means, in Tic Tac Toe, it's simply any full row, column or diagonal that is filled with the same token. In our GameState class, we can quantify these with a new multi-dimensional array that will allow us to check an initial cell on the game board and check all available win conditions related to that cell.
 
@@ -493,7 +501,9 @@ if((winner = gameState.hasWinner()) > 0){
 }
 ```
 
-Now running `node index` and playing a game out to a win will give us something like <INSERT SCREENSHOT>
+Now running `node index` and playing a game out to a win will give us something like
+
+![First win condition achieved!](https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.55.39%20PM.png?raw=true)
 
 And with that, we have a working multiplayer (couch co-op!) Tic Tac Toe game.
 
@@ -727,7 +737,7 @@ else {
 }
 ```
 
-Now, when we run `node index` we're going to be trading turns with our new AI. <INSERT SCREENSHOT BELOW>
+Now, when we run `node index` we're going to be trading turns with our new AI.
 
 But it's not very fun. We have to actively try to lose at this point since the AI is just blindly throwing darts at the game board. So let's make it a little more fun and get our AI scoring all of the moves using the brute force method described previously.
 
