@@ -1,0 +1,23 @@
+{
+  "name": "ai-games",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blog-create.js",
+  "dependencies": {
+    "markdown-to-html": "^0.0.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immrama87/game-ai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/immrama87/game-ai/issues"
+  },
+  "homepage": "https://github.com/immrama87/game-ai#readme"
+}
