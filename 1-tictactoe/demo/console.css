@@ -1,0 +1,11 @@
+div.console{
+  font-family: 'Space Mono';
+  width:75%;
+  height:70vh;
+  padding:2vh;
+  background:black;
+  color:#66ff00;
+  margin:0 auto;
+  font-size:2vh;
+  overflow-y:scroll;
+}
