@@ -5,7 +5,965 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/immrama87/game-ai/gh-pages/node_modules/github-markdown-css/github-markdown.css"/>
+    <style>
+      @font-face {
+        font-family: octicons-link;
+        src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+      }
+
+      .markdown-body .octicon {
+        display: inline-block;
+        fill: currentColor;
+        vertical-align: text-bottom;
+      }
+
+      .markdown-body .anchor {
+        float: left;
+        line-height: 1;
+        margin-left: -20px;
+        padding-right: 4px;
+      }
+
+      .markdown-body .anchor:focus {
+        outline: none;
+      }
+
+      .markdown-body h1 .octicon-link,
+      .markdown-body h2 .octicon-link,
+      .markdown-body h3 .octicon-link,
+      .markdown-body h4 .octicon-link,
+      .markdown-body h5 .octicon-link,
+      .markdown-body h6 .octicon-link {
+        color: #1b1f23;
+        vertical-align: middle;
+        visibility: hidden;
+      }
+
+      .markdown-body h1:hover .anchor,
+      .markdown-body h2:hover .anchor,
+      .markdown-body h3:hover .anchor,
+      .markdown-body h4:hover .anchor,
+      .markdown-body h5:hover .anchor,
+      .markdown-body h6:hover .anchor {
+        text-decoration: none;
+      }
+
+      .markdown-body h1:hover .anchor .octicon-link,
+      .markdown-body h2:hover .anchor .octicon-link,
+      .markdown-body h3:hover .anchor .octicon-link,
+      .markdown-body h4:hover .anchor .octicon-link,
+      .markdown-body h5:hover .anchor .octicon-link,
+      .markdown-body h6:hover .anchor .octicon-link {
+        visibility: visible;
+      }
+
+      .markdown-body {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        color: #24292e;
+        line-height: 1.5;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+        font-size: 16px;
+        line-height: 1.5;
+        word-wrap: break-word;
+      }
+
+      .markdown-body .pl-c {
+        color: #6a737d;
+      }
+
+      .markdown-body .pl-c1,
+      .markdown-body .pl-s .pl-v {
+        color: #005cc5;
+      }
+
+      .markdown-body .pl-e,
+      .markdown-body .pl-en {
+        color: #6f42c1;
+      }
+
+      .markdown-body .pl-s .pl-s1,
+      .markdown-body .pl-smi {
+        color: #24292e;
+      }
+
+      .markdown-body .pl-ent {
+        color: #22863a;
+      }
+
+      .markdown-body .pl-k {
+        color: #d73a49;
+      }
+
+      .markdown-body .pl-pds,
+      .markdown-body .pl-s,
+      .markdown-body .pl-s .pl-pse .pl-s1,
+      .markdown-body .pl-sr,
+      .markdown-body .pl-sr .pl-cce,
+      .markdown-body .pl-sr .pl-sra,
+      .markdown-body .pl-sr .pl-sre {
+        color: #032f62;
+      }
+
+      .markdown-body .pl-smw,
+      .markdown-body .pl-v {
+        color: #e36209;
+      }
+
+      .markdown-body .pl-bu {
+        color: #b31d28;
+      }
+
+      .markdown-body .pl-ii {
+        background-color: #b31d28;
+        color: #fafbfc;
+      }
+
+      .markdown-body .pl-c2 {
+        background-color: #d73a49;
+        color: #fafbfc;
+      }
+
+      .markdown-body .pl-c2:before {
+        content: "^M";
+      }
+
+      .markdown-body .pl-sr .pl-cce {
+        color: #22863a;
+        font-weight: 700;
+      }
+
+      .markdown-body .pl-ml {
+        color: #735c0f;
+      }
+
+      .markdown-body .pl-mh,
+      .markdown-body .pl-mh .pl-en,
+      .markdown-body .pl-ms {
+        color: #005cc5;
+        font-weight: 700;
+      }
+
+      .markdown-body .pl-mi {
+        color: #24292e;
+        font-style: italic;
+      }
+
+      .markdown-body .pl-mb {
+        color: #24292e;
+        font-weight: 700;
+      }
+
+      .markdown-body .pl-md {
+        background-color: #ffeef0;
+        color: #b31d28;
+      }
+
+      .markdown-body .pl-mi1 {
+        background-color: #f0fff4;
+        color: #22863a;
+      }
+
+      .markdown-body .pl-mc {
+        background-color: #ffebda;
+        color: #e36209;
+      }
+
+      .markdown-body .pl-mi2 {
+        background-color: #005cc5;
+        color: #f6f8fa;
+      }
+
+      .markdown-body .pl-mdr {
+        color: #6f42c1;
+        font-weight: 700;
+      }
+
+      .markdown-body .pl-ba {
+        color: #586069;
+      }
+
+      .markdown-body .pl-sg {
+        color: #959da5;
+      }
+
+      .markdown-body .pl-corl {
+        color: #032f62;
+        text-decoration: underline;
+      }
+
+      .markdown-body details {
+        display: block;
+      }
+
+      .markdown-body summary {
+        display: list-item;
+      }
+
+      .markdown-body a {
+        background-color: transparent;
+      }
+
+      .markdown-body a:active,
+      .markdown-body a:hover {
+        outline-width: 0;
+      }
+
+      .markdown-body strong {
+        font-weight: inherit;
+        font-weight: bolder;
+      }
+
+      .markdown-body h1 {
+        font-size: 2em;
+        margin: .67em 0;
+      }
+
+      .markdown-body img {
+        border-style: none;
+      }
+
+      .markdown-body code,
+      .markdown-body kbd,
+      .markdown-body pre {
+        font-family: monospace,monospace;
+        font-size: 1em;
+      }
+
+      .markdown-body hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+
+      .markdown-body input {
+        font: inherit;
+        margin: 0;
+      }
+
+      .markdown-body input {
+        overflow: visible;
+      }
+
+      .markdown-body [type=checkbox] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+
+      .markdown-body * {
+        box-sizing: border-box;
+      }
+
+      .markdown-body input {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      .markdown-body a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+
+      .markdown-body a:hover {
+        text-decoration: underline;
+      }
+
+      .markdown-body strong {
+        font-weight: 600;
+      }
+
+      .markdown-body hr {
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #dfe2e5;
+        height: 0;
+        margin: 15px 0;
+        overflow: hidden;
+      }
+
+      .markdown-body hr:before {
+        content: "";
+        display: table;
+      }
+
+      .markdown-body hr:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+
+      .markdown-body table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      .markdown-body td,
+      .markdown-body th {
+        padding: 0;
+      }
+
+      .markdown-body details summary {
+        cursor: pointer;
+      }
+
+      .markdown-body h1,
+      .markdown-body h2,
+      .markdown-body h3,
+      .markdown-body h4,
+      .markdown-body h5,
+      .markdown-body h6 {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .markdown-body h1 {
+        font-size: 32px;
+      }
+
+      .markdown-body h1,
+      .markdown-body h2 {
+        font-weight: 600;
+      }
+
+      .markdown-body h2 {
+        font-size: 24px;
+      }
+
+      .markdown-body h3 {
+        font-size: 20px;
+      }
+
+      .markdown-body h3,
+      .markdown-body h4 {
+        font-weight: 600;
+      }
+
+      .markdown-body h4 {
+        font-size: 16px;
+      }
+
+      .markdown-body h5 {
+        font-size: 14px;
+      }
+
+      .markdown-body h5,
+      .markdown-body h6 {
+        font-weight: 600;
+      }
+
+      .markdown-body h6 {
+        font-size: 12px;
+      }
+
+      .markdown-body p {
+        margin-bottom: 10px;
+        margin-top: 0;
+      }
+
+      .markdown-body blockquote {
+        margin: 0;
+      }
+
+      .markdown-body ol,
+      .markdown-body ul {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-left: 0;
+      }
+
+      .markdown-body ol ol,
+      .markdown-body ul ol {
+        list-style-type: lower-roman;
+      }
+
+      .markdown-body ol ol ol,
+      .markdown-body ol ul ol,
+      .markdown-body ul ol ol,
+      .markdown-body ul ul ol {
+        list-style-type: lower-alpha;
+      }
+
+      .markdown-body dd {
+        margin-left: 0;
+      }
+
+      .markdown-body code,
+      .markdown-body pre {
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        font-size: 12px;
+      }
+
+      .markdown-body pre {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .markdown-body input::-webkit-inner-spin-button,
+      .markdown-body input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+
+      .markdown-body .border {
+        border: 1px solid #e1e4e8!important;
+      }
+
+      .markdown-body .border-0 {
+        border: 0!important;
+      }
+
+      .markdown-body .border-bottom {
+        border-bottom: 1px solid #e1e4e8!important;
+      }
+
+      .markdown-body .rounded-1 {
+        border-radius: 3px!important;
+      }
+
+      .markdown-body .bg-white {
+        background-color: #fff!important;
+      }
+
+      .markdown-body .bg-gray-light {
+        background-color: #fafbfc!important;
+      }
+
+      .markdown-body .text-gray-light {
+        color: #6a737d!important;
+      }
+
+      .markdown-body .mb-0 {
+        margin-bottom: 0!important;
+      }
+
+      .markdown-body .my-2 {
+        margin-bottom: 8px!important;
+        margin-top: 8px!important;
+      }
+
+      .markdown-body .pl-0 {
+        padding-left: 0!important;
+      }
+
+      .markdown-body .py-0 {
+        padding-bottom: 0!important;
+        padding-top: 0!important;
+      }
+
+      .markdown-body .pl-1 {
+        padding-left: 4px!important;
+      }
+
+      .markdown-body .pl-2 {
+        padding-left: 8px!important;
+      }
+
+      .markdown-body .py-2 {
+        padding-bottom: 8px!important;
+        padding-top: 8px!important;
+      }
+
+      .markdown-body .pl-3,
+      .markdown-body .px-3 {
+        padding-left: 16px!important;
+      }
+
+      .markdown-body .px-3 {
+        padding-right: 16px!important;
+      }
+
+      .markdown-body .pl-4 {
+        padding-left: 24px!important;
+      }
+
+      .markdown-body .pl-5 {
+        padding-left: 32px!important;
+      }
+
+      .markdown-body .pl-6 {
+        padding-left: 40px!important;
+      }
+
+      .markdown-body .f6 {
+        font-size: 12px!important;
+      }
+
+      .markdown-body .lh-condensed {
+        line-height: 1.25!important;
+      }
+
+      .markdown-body .text-bold {
+        font-weight: 600!important;
+      }
+
+      .markdown-body:before {
+        content: "";
+        display: table;
+      }
+
+      .markdown-body:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+
+      .markdown-body>:first-child {
+        margin-top: 0!important;
+      }
+
+      .markdown-body>:last-child {
+        margin-bottom: 0!important;
+      }
+
+      .markdown-body a:not([href]) {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .markdown-body blockquote,
+      .markdown-body dl,
+      .markdown-body ol,
+      .markdown-body p,
+      .markdown-body pre,
+      .markdown-body table,
+      .markdown-body ul {
+        margin-bottom: 16px;
+        margin-top: 0;
+      }
+
+      .markdown-body hr {
+        background-color: #e1e4e8;
+        border: 0;
+        height: .25em;
+        margin: 24px 0;
+        padding: 0;
+      }
+
+      .markdown-body blockquote {
+        border-left: .25em solid #dfe2e5;
+        color: #6a737d;
+        padding: 0 1em;
+      }
+
+      .markdown-body blockquote>:first-child {
+        margin-top: 0;
+      }
+
+      .markdown-body blockquote>:last-child {
+        margin-bottom: 0;
+      }
+
+      .markdown-body kbd {
+        background-color: #fafbfc;
+        border: 1px solid #c6cbd1;
+        border-bottom-color: #959da5;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #959da5;
+        color: #444d56;
+        display: inline-block;
+        font-size: 11px;
+        line-height: 10px;
+        padding: 3px 5px;
+        vertical-align: middle;
+      }
+
+      .markdown-body h1,
+      .markdown-body h2,
+      .markdown-body h3,
+      .markdown-body h4,
+      .markdown-body h5,
+      .markdown-body h6 {
+        font-weight: 600;
+        line-height: 1.25;
+        margin-bottom: 16px;
+        margin-top: 24px;
+      }
+
+      .markdown-body h1 {
+        font-size: 2em;
+      }
+
+      .markdown-body h1,
+      .markdown-body h2 {
+        border-bottom: 1px solid #eaecef;
+        padding-bottom: .3em;
+      }
+
+      .markdown-body h2 {
+        font-size: 1.5em;
+      }
+
+      .markdown-body h3 {
+        font-size: 1.25em;
+      }
+
+      .markdown-body h4 {
+        font-size: 1em;
+      }
+
+      .markdown-body h5 {
+        font-size: .875em;
+      }
+
+      .markdown-body h6 {
+        color: #6a737d;
+        font-size: .85em;
+      }
+
+      .markdown-body ol,
+      .markdown-body ul {
+        padding-left: 2em;
+      }
+
+      .markdown-body ol ol,
+      .markdown-body ol ul,
+      .markdown-body ul ol,
+      .markdown-body ul ul {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .markdown-body li {
+        word-wrap: break-all;
+      }
+
+      .markdown-body li>p {
+        margin-top: 16px;
+      }
+
+      .markdown-body li+li {
+        margin-top: .25em;
+      }
+
+      .markdown-body dl {
+        padding: 0;
+      }
+
+      .markdown-body dl dt {
+        font-size: 1em;
+        font-style: italic;
+        font-weight: 600;
+        margin-top: 16px;
+        padding: 0;
+      }
+
+      .markdown-body dl dd {
+        margin-bottom: 16px;
+        padding: 0 16px;
+      }
+
+      .markdown-body table {
+        display: block;
+        overflow: auto;
+        width: 100%;
+      }
+
+      .markdown-body table th {
+        font-weight: 600;
+      }
+
+      .markdown-body table td,
+      .markdown-body table th {
+        border: 1px solid #dfe2e5;
+        padding: 6px 13px;
+      }
+
+      .markdown-body table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+
+      .markdown-body table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+
+      .markdown-body img {
+        background-color: #fff;
+        box-sizing: content-box;
+        max-width: 100%;
+      }
+
+      .markdown-body img[align=right] {
+        padding-left: 20px;
+      }
+
+      .markdown-body img[align=left] {
+        padding-right: 20px;
+      }
+
+      .markdown-body code {
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+      }
+
+      .markdown-body pre {
+        word-wrap: normal;
+      }
+
+      .markdown-body pre>code {
+        background: transparent;
+        border: 0;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+        white-space: pre;
+        word-break: normal;
+      }
+
+      .markdown-body .highlight {
+        margin-bottom: 16px;
+      }
+
+      .markdown-body .highlight pre {
+        margin-bottom: 0;
+        word-break: normal;
+      }
+
+      .markdown-body .highlight pre,
+      .markdown-body pre {
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        font-size: 85%;
+        line-height: 1.45;
+        overflow: auto;
+        padding: 16px;
+      }
+
+      .markdown-body pre code {
+        background-color: transparent;
+        border: 0;
+        display: inline;
+        line-height: inherit;
+        margin: 0;
+        max-width: auto;
+        overflow: visible;
+        padding: 0;
+        word-wrap: normal;
+      }
+
+      .markdown-body .commit-tease-sha {
+        color: #444d56;
+        display: inline-block;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        font-size: 90%;
+      }
+
+      .markdown-body .blob-wrapper {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+
+      .markdown-body .blob-wrapper-embedded {
+        max-height: 240px;
+        overflow-y: auto;
+      }
+
+      .markdown-body .blob-num {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        color: rgba(27,31,35,.3);
+        cursor: pointer;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        font-size: 12px;
+        line-height: 20px;
+        min-width: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: right;
+        user-select: none;
+        vertical-align: top;
+        white-space: nowrap;
+        width: 1%;
+      }
+
+      .markdown-body .blob-num:hover {
+        color: rgba(27,31,35,.6);
+      }
+
+      .markdown-body .blob-num:before {
+        content: attr(data-line-number);
+      }
+
+      .markdown-body .blob-code {
+        line-height: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        vertical-align: top;
+      }
+
+      .markdown-body .blob-code-inner {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        font-size: 12px;
+        overflow: visible;
+        white-space: pre;
+        word-wrap: normal;
+      }
+
+      .markdown-body .pl-token.active,
+      .markdown-body .pl-token:hover {
+        background: #ffea7f;
+        cursor: pointer;
+      }
+
+      .markdown-body kbd {
+        background-color: #fafbfc;
+        border: 1px solid #d1d5da;
+        border-bottom-color: #c6cbd1;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #c6cbd1;
+        color: #444d56;
+        display: inline-block;
+        font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        line-height: 10px;
+        padding: 3px 5px;
+        vertical-align: middle;
+      }
+
+      .markdown-body :checked+.radio-label {
+        border-color: #0366d6;
+        position: relative;
+        z-index: 1;
+      }
+
+      .markdown-body .tab-size[data-tab-size="1"] {
+        -moz-tab-size: 1;
+        tab-size: 1;
+      }
+
+      .markdown-body .tab-size[data-tab-size="2"] {
+        -moz-tab-size: 2;
+        tab-size: 2;
+      }
+
+      .markdown-body .tab-size[data-tab-size="3"] {
+        -moz-tab-size: 3;
+        tab-size: 3;
+      }
+
+      .markdown-body .tab-size[data-tab-size="4"] {
+        -moz-tab-size: 4;
+        tab-size: 4;
+      }
+
+      .markdown-body .tab-size[data-tab-size="5"] {
+        -moz-tab-size: 5;
+        tab-size: 5;
+      }
+
+      .markdown-body .tab-size[data-tab-size="6"] {
+        -moz-tab-size: 6;
+        tab-size: 6;
+      }
+
+      .markdown-body .tab-size[data-tab-size="7"] {
+        -moz-tab-size: 7;
+        tab-size: 7;
+      }
+
+      .markdown-body .tab-size[data-tab-size="8"] {
+        -moz-tab-size: 8;
+        tab-size: 8;
+      }
+
+      .markdown-body .tab-size[data-tab-size="9"] {
+        -moz-tab-size: 9;
+        tab-size: 9;
+      }
+
+      .markdown-body .tab-size[data-tab-size="10"] {
+        -moz-tab-size: 10;
+        tab-size: 10;
+      }
+
+      .markdown-body .tab-size[data-tab-size="11"] {
+        -moz-tab-size: 11;
+        tab-size: 11;
+      }
+
+      .markdown-body .tab-size[data-tab-size="12"] {
+        -moz-tab-size: 12;
+        tab-size: 12;
+      }
+
+      .markdown-body .task-list-item {
+        list-style-type: none;
+      }
+
+      .markdown-body .task-list-item+.task-list-item {
+        margin-top: 3px;
+      }
+
+      .markdown-body .task-list-item input {
+        margin: 0 .2em .25em -1.6em;
+        vertical-align: middle;
+      }
+
+      .markdown-body hr {
+        border-bottom-color: #eee;
+      }
+
+      .markdown-body .pl-0 {
+        padding-left: 0!important;
+      }
+
+      .markdown-body .pl-1 {
+        padding-left: 4px!important;
+      }
+
+      .markdown-body .pl-2 {
+        padding-left: 8px!important;
+      }
+
+      .markdown-body .pl-3 {
+        padding-left: 16px!important;
+      }
+
+      .markdown-body .pl-4 {
+        padding-left: 24px!important;
+      }
+
+      .markdown-body .pl-5 {
+        padding-left: 32px!important;
+      }
+
+      .markdown-body .pl-6 {
+        padding-left: 40px!important;
+      }
+
+      .markdown-body .pl-7 {
+        padding-left: 48px!important;
+      }
+
+      .markdown-body .pl-8 {
+        padding-left: 64px!important;
+      }
+
+      .markdown-body .pl-9 {
+        padding-left: 80px!important;
+      }
+
+      .markdown-body .pl-10 {
+        padding-left: 96px!important;
+      }
+
+      .markdown-body .pl-11 {
+        padding-left: 112px!important;
+      }
+
+      .markdown-body .pl-12 {
+        padding-left: 128px!important;
+      }
+    </style>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -17,16 +975,12 @@
     <header class="navbar navbar-default justify-content-center">
       <a class="navbar-brand display-1"><h1>Learning By Doing: Tic Tac Toe</h1></a>
     </header>
-    <div class="container">
-      <h1>
-<a id="user-content-learning-by-doing-game-ai" class="anchor" href="#learning-by-doing-game-ai" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Learning by Doing: Game AI</h1>
-<h2>
-<a id="user-content-tic-tac-toe" class="anchor" href="#tic-tac-toe" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tic Tac Toe</h2>
-<h3>
-<a id="user-content-introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h3>
+    <div class="markdown-body container">
+      <h1>Learning by Doing: Game AI</h1>
+<h2>Tic Tac Toe</h2>
+<h3>Introduction</h3>
 <p>AI development is a complicated but fascinating process. A simple game like Tic Tac Toe is a perfect starting point because the ruleset is extremely basic and the results of any processing can be immediately visualized, giving us the opportunity to quickly evaluate how successful or unsuccessful our AI is. Finally, as the movie <em>War Games</em> showed, Tic Tac Toe is a game in which two players who are consistently making the optimal move will always end in stalemate, giving us a clearly defined goal for the final state of our AI.</p>
-<h3>
-<a id="user-content-part-1-initial-setup" class="anchor" href="#part-1-initial-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 1: Initial Setup</h3>
+<h3>Part 1: Initial Setup</h3>
 <p>Before we can start working on AI, we need to have at least a minimally working Tic Tac Toe game. The requirements for this are:</p>
 <ul>
 <li>A renderer which is capable of consuming or tracking a game state and generating the visual representation of the game board.</li>
@@ -35,8 +989,7 @@
 <li>A game loop which tracks which of the two players is currently playing.</li>
 </ul>
 <p>To start our project folder should contain just an index.js file and (optionally) package.json file.</p>
-<h4>
-<a id="user-content-the-game-board" class="anchor" href="#the-game-board" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Game Board</h4>
+<h4>The Game Board</h4>
 <p>Generating our gameboard is fairly straightforward, we just need something that outputs 3 columns and 3 rows, each with 3 possible states (neutral, player 1 and player 2). In our index.js file, we can do this with:</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> state <span class="pl-k">=</span> [<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>]; <span class="pl-c"><span class="pl-c">//</span>Pre-initialize a state array with 9 elements</span>
 <span class="pl-k">const</span> <span class="pl-c1">stateTokens</span> <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>-<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>X<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>O<span class="pl-pds">'</span></span>]; <span class="pl-c"><span class="pl-c">//</span>State tokens to display the state of a game board cell</span>
@@ -54,9 +1007,8 @@
 
 <span class="pl-en">render</span>();</pre></div>
 <p>Running <code>node index</code> now will give us output that should look like</p>
-<p><a href="https://raw.githubusercontent.com/immrama87/game-ai/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.23.20%20PM.png" target="_blank" rel="nofollow"><img src="https://raw.githubusercontent.com/immrama87/game-ai/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.23.20%20PM.png" alt="Initial Game Rendering" style="max-width:100%;"></a></p>
-<h4>
-<a id="user-content-the-cli" class="anchor" href="#the-cli" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The CLI</h4>
+<p><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/immrama87/game-ai/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.23.20%20PM.png"><img src="https://raw.githubusercontent.com/immrama87/game-ai/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.23.20%20PM.png" alt="Initial Game Rendering" style="max-width:100%;"></a></p>
+<h4>The CLI</h4>
 <p>Now that we have a game board to play on, it's time to start collecting input from the player to play our Tic Tac Toe game. We're going to create a simple CLI, built around a readline interface that will simply write arbitrary string data and prompt the player for input.</p>
 <p>We will first create a new directory in our project folder called "CLI" and inside this new directory create a file called index.js. The contents of this file should be:</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-c1">CLI</span> <span class="pl-k">=</span> (<span class="pl-k">function</span>(<span class="pl-k">interface</span> <span class="pl-c"><span class="pl-c">/**</span> Readline.Interface *<span class="pl-c">*/</span></span>){
@@ -139,7 +1091,7 @@
 
 <span class="pl-en">promptForColumn</span>();</pre></div>
 <p>Now, we have a game (sort of)! If we run <code>node index</code> now, we should see something like</p>
-<p><a href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.25.54%20PM.png?raw=true" target="_blank" rel="noopener noreferrer"><img src="https://github.com/immrama87/game-ai/raw/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.25.54%20PM.png?raw=true" alt="First round with player input" style="max-width:100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.25.54%20PM.png?raw=true"><img src="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.25.54%20PM.png?raw=true" alt="First round with player input" style="max-width:100%;"></a></p>
 <p>The game takes our inputs for a column and row and outputs an updated game board with an 'X' in the selected space, so we've got two of our four boxes checked. We still need input validation, because at this point the player can enter string data or overload the <strong>state</strong> array because we are simply trusting that their input is valid. The game also only works once, so it's currently impossible to win, lose or draw.</p>
 <p>First, let's tackle the easier input validation problem, then we can wrap everything up in a game loop. We'll need to add the following to /index.js:</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">validateInput</span>(<span class="pl-smi">str</span>){
@@ -193,7 +1145,7 @@
 <div class="highlight highlight-source-js"><pre>currentPlayer <span class="pl-k">=</span> (currentPlayer <span class="pl-k">+</span> <span class="pl-c1">1</span>) <span class="pl-k">%</span> <span class="pl-c1">2</span>; <span class="pl-c"><span class="pl-c">//</span>Make sure we're clamping it so there are only 2 players.</span>
 <span class="pl-en">promptForColumn</span>();</pre></div>
 <p>Now, if we run <code>node index</code> we should see something like</p>
-<p><a href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.51.53%20PM.png?raw=true" target="_blank" rel="noopener noreferrer"><img src="https://github.com/immrama87/game-ai/raw/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.51.53%20PM.png?raw=true" alt="Game loops and tracks player" style="max-width:100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.51.53%20PM.png?raw=true"><img src="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.51.53%20PM.png?raw=true" alt="Game loops and tracks player" style="max-width:100%;"></a></p>
 <p>At this point our /index.js should look like:</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">readline</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>readline<span class="pl-pds">'</span></span>);
 <span class="pl-k">const</span> <span class="pl-c1">cli</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>./CLI<span class="pl-pds">'</span></span>)(<span class="pl-smi">readline</span>.<span class="pl-en">createInterface</span>({
@@ -281,8 +1233,7 @@
 });
 
 <span class="pl-c1">module</span>.<span class="pl-smi">exports</span> <span class="pl-k">=</span> <span class="pl-c1">CLI</span>;</pre></div>
-<h4>
-<a id="user-content-game-states" class="anchor" href="#game-states" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Game States</h4>
+<h4>Game States</h4>
 <p>We're almost to the point where we can start programming some AI for our Tic Tac Toe game, but there's a couple of problems that still need to be dealt with. The biggest one is that there's no way to win or lose the game and there's no validation that tokens are only placed in empty cells. For the sake of keeping /index.js clean, as well as to help us out when we start building our AI, we're going to offload this functionality into a new GameState class. So let's start by creating a new GameState directory in our project folder and create an index.js file in this new directory, with the following contents:</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> GameState <span class="pl-k">=</span> (<span class="pl-k">function</span>(<span class="pl-smi">state</span>){
   state <span class="pl-k">=</span> state <span class="pl-k">||</span> [<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>,<span class="pl-c1">0</span>];
@@ -330,7 +1281,7 @@
   <span class="pl-c1">process</span>.<span class="pl-en">exit</span>();
 }</pre></div>
 <p>Testing this, we should end up with something that looks like this</p>
-<p><a href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.51.04%20PM.png?raw=true" target="_blank" rel="noopener noreferrer"><img src="https://github.com/immrama87/game-ai/raw/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.51.04%20PM.png?raw=true" alt="Stalemate condition reached" style="max-width:100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.51.04%20PM.png?raw=true"><img src="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.51.04%20PM.png?raw=true" alt="Stalemate condition reached" style="max-width:100%;"></a></p>
 <p>And now our game has its first end condition (even if it is the most boring one...)! We do still have the issue that players can overwrite their opponent's tokens, so before we build in a win condition, let's make sure players can't cheat first.</p>
 <p>Currently, the GameState class is simply taking a cell and placing the requested token, but we need it to make sure that cell is empty first, which as we just saw is dead simple, so we just need to add a simple condition to the <strong>setCell</strong> method, to read:</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">gs</span>.<span class="pl-en">setCell</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">cell</span>, <span class="pl-smi">player</span>){
@@ -352,7 +1303,7 @@
   <span class="pl-en">promptForColumn</span>();
 }</pre></div>
 <p>Running <code>node index</code> now and trying to play the same cell twice should end up prompting the error message above, like this</p>
-<p><a href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.31.51%20PM.png?raw=true" target="_blank" rel="noopener noreferrer"><img src="https://github.com/immrama87/game-ai/raw/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.31.51%20PM.png?raw=true" alt="Cell availability check fails" style="max-width:100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.31.51%20PM.png?raw=true"><img src="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.31.51%20PM.png?raw=true" alt="Cell availability check fails" style="max-width:100%;"></a></p>
 <p>Now we're finally ready to build in a win condition. First we need to figure out what that means, in Tic Tac Toe, it's simply any full row, column or diagonal that is filled with the same token. In our GameState class, we can quantify these with a new multi-dimensional array that will allow us to check an initial cell on the game board and check all available win conditions related to that cell.</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">winConditions</span> <span class="pl-k">=</span> [
   [
@@ -401,7 +1352,7 @@
   <span class="pl-c1">process</span>.<span class="pl-en">exit</span>();
 }</pre></div>
 <p>Now running <code>node index</code> and playing a game out to a win will give us something like</p>
-<p><a href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.55.39%20PM.png?raw=true" target="_blank" rel="noopener noreferrer"><img src="https://github.com/immrama87/game-ai/raw/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.55.39%20PM.png?raw=true" alt="First win condition achieved!" style="max-width:100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.55.39%20PM.png?raw=true"><img src="https://github.com/immrama87/game-ai/blob/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%204.55.39%20PM.png?raw=true" alt="First win condition achieved!" style="max-width:100%;"></a></p>
 <p>And with that, we have a working multiplayer (couch co-op!) Tic Tac Toe game.</p>
 <p>At this point, we should have a /index.js file that looks like:</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">readline</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>readline<span class="pl-pds">'</span></span>);
@@ -556,8 +1507,7 @@
 });
 
 <span class="pl-c1">module</span>.<span class="pl-smi">exports</span> <span class="pl-k">=</span> GameState;</pre></div>
-<h3>
-<a id="user-content-part-2-a-basic-ai" class="anchor" href="#part-2-a-basic-ai" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 2: A Basic AI</h3>
+<h3>Part 2: A Basic AI</h3>
 <p>Now that we have a playable game, it's time to teach it to play itself. We'll start with a fairly simple, brute-force AI that plays out every possible permutation of a game state and categorizes them based on potential wins vs. potential losses. Before we do that, though, let's just get a dumb "AI" running that randomly picks a cell to place its token on.</p>
 <p>To start, we'll need to create a new directory, called AI, with a index.js file in our project folder. The index.js for our dumb AI will look like:</p>
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-c1">AI</span> <span class="pl-k">=</span> (<span class="pl-k">function</span>(){
@@ -846,8 +1796,7 @@
 
 <span class="pl-c1">module</span>.<span class="pl-smi">exports</span> <span class="pl-k">=</span> <span class="pl-c1">AI</span>;</pre></div>
 <p>everything else, except for the <strong>GameState#clone</strong> method should be the same as it was at the end of part 1.</p>
-<h3>
-<a id="user-content-part-3-the-best-offense" class="anchor" href="#part-3-the-best-offense" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 3: The Best Offense?</h3>
+<h3>Part 3: The Best Offense?</h3>
 <p>At this point, if you've played a game against your AI, you'll have probably noticed that it does not quite hit the mark we were shooting for. If you're not sure what that means, try playing a game with the following moves:</p>
 <p><strong>Move 1:</strong> Column 1, Row 1</p>
 <p><em>AI selects cell at column 2 and row 2</em></p>
@@ -1456,8 +2405,6 @@
 });
 
 <span class="pl-c1">module</span>.<span class="pl-smi">exports</span> <span class="pl-k">=</span> GameState;</pre></div>
-
-
     </div>
   </body>
 </html>

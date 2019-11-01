@@ -2,10 +2,7 @@ const fs = require('fs');
 const stream = require('stream');
 const util = require('util');
 const path = require('path');
-const Markdown = require('markdown-to-html').GithubMarkdown;
-const md = new Markdown();
-md.bufmax = 2048;
-const opts = {highlight: true};
+const https = require('https');
 
 var args = Array.from(process.argv);
 var arg;
@@ -61,54 +58,64 @@ if(filename == undefined || title == undefined || template == undefined || outpu
   usage(1);
 }
 
+const mdContents = fs.readFileSync(path.join(__dirname, filename), "utf8");
+const postData = JSON.stringify({text: mdContents, mode: "gfm", context: "github/immrama87"});
 
-const ReaderStream = function(){
-  this.data = "";
-  stream.Writable.call(this);
-}
-util.inherits(ReaderStream, stream.Writable);
-ReaderStream.prototype._write = function(chunk, encoding, done){
-  this.data += chunk;
-  done();
-}
-
-const reader = new ReaderStream();
-
-md.once('end', function(){
-  var fileContents = fs.readFileSync(path.join(__dirname, template), "utf8");
-  var titleIndex;
-  while((titleIndex = fileContents.indexOf("{title}")) > -1){
-    fileContents = fileContents.substring(0, titleIndex) +
-      title +
-      fileContents.substring(titleIndex + ("{title}").length);
+const httpsOpts = {
+  method: 'POST',
+  host: 'api.github.com',
+  path: '/markdown',
+  port: '443',
+  headers: {
+    'Content-Type': "application/json",
+    'Content-Length': Buffer.byteLength(postData),
+    'User-Agent': "immrama87"
   }
+};
 
-  var mdIndex;
-  while((mdIndex = fileContents.indexOf("{markdown}")) > -1){
-    fileContents = fileContents.substring(0, mdIndex) +
-      reader.data +
-      fileContents.substring(mdIndex + ("{markdown}").length);
-  }
+const req = https.request(httpsOpts, function(res){
+  var data = "";
+  res.setEncoding('utf8');
 
-  fs.writeFile(path.join(__dirname, output), fileContents, "utf8", function(err){
-    if(err){
-      console.error(`Error generating file: ${err}`);
-      process.exit(1);
+  res.on('data', function(chunk){
+    data += chunk;
+  });
+
+  res.on('end', function(){
+    var fileContents = fs.readFileSync(path.join(__dirname, template), "utf8");
+    var titleIndex;
+    while((titleIndex = fileContents.indexOf("{title}")) > -1){
+      fileContents = fileContents.substring(0, titleIndex) +
+        title +
+        fileContents.substring(titleIndex + ("{title}").length);
     }
 
-    console.log(`File ${path.join(__dirname, output)} created successfully.`);
-    process.exit();
+    var mdIndex;
+    while((mdIndex = fileContents.indexOf("{markdown}")) > -1){
+      fileContents = fileContents.substring(0, mdIndex) +
+        data +
+        fileContents.substring(mdIndex + ("{markdown}").length);
+    }
+
+    fs.writeFile(path.join(__dirname, output), fileContents, "utf8", function(err){
+      if(err){
+        console.error(`Error generating file: ${err}`);
+        process.exit(1);
+      }
+
+      console.log(`File ${path.join(__dirname, output)} created successfully.`);
+      process.exit();
+    });
   });
 });
 
-md.render(path.join(__dirname, filename), opts, function(err){
-  if(err){
-    console.error(`Error processing markdown: ${err}`);
-    process.exit(1);
-  }
-
-  md.pipe(reader)
+req.on('error', function(err){
+  console.error(`Error occurred retrieving MD data from GitHub: ${err}`);
+  process.exit(1);
 });
+
+req.write(postData);
+req.end();
 
 function usage(code){
   code = code || 0;
