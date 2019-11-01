@@ -37,7 +37,7 @@ render();
 
 Running `node index` now will give us output that should look like
 
-<center>![Initial Game Rendering](https://raw.githubusercontent.com/immrama87/game-ai/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.23.20%20PM.png)</center>
+![Initial Game Rendering](https://raw.githubusercontent.com/immrama87/game-ai/master/1-tictactoe/images/Screen%20Shot%202019-10-23%20at%203.23.20%20PM.png)
 
 #### The CLI
 Now that we have a game board to play on, it's time to start collecting input from the player to play our Tic Tac Toe game. We're going to create a simple CLI, built around a readline interface that will simply write arbitrary string data and prompt the player for input.
